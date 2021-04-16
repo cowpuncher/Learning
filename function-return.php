@@ -10,6 +10,8 @@
         ul {
             list-style: none;
             padding-left: 0;
+            max-width: 400px;
+            margin: 0 auto;
         }
         li {
             border: 1px solid transparent;
@@ -37,7 +39,7 @@
 <?php
 
 
-function discriminant($b,$a,$c) {
+function discriminant($a,$b,$c) {
     return $b^2-4*$a*$c;
 }
 echo discriminant(3, -14, -5);
