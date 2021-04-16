@@ -60,9 +60,9 @@ $tmp_password = 'secret123';
 
 if ($tmp_login == LOGIN && $tmp_password != PASSWORD) {
     echo 'Check correct your password';
-} else if ($tmp_login != LOGIN ) {
+} elseif ($tmp_login != LOGIN ) {
     echo 'User not found';
-} else if ($tmp_login == LOGIN && $tmp_password == PASSWORD) {
+} else {
     echo 'Auth success';
 }
 
@@ -73,7 +73,7 @@ if ($tmp_login == LOGIN && $tmp_password != PASSWORD) {
 
 $isStatus = true;
 
-$statusResult = ($isStatus == true) ? "43224656" : "98645623";
+$statusResult = ($isStatus) ? 4322465 : 98645623;
 echo $statusResult;
 
 ?>
