@@ -1,101 +1,54 @@
-<?php
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
 
-const GREETING = "Hello";
-$name = "Eugene";
-echo GREETING . ', ' . $name;
+<form action="includes/add_product.php" method="post">
+    <label for="">Название товара</label>
+    <input type="text" name="title">
 
-?>
-<br>
-<br>
-<?php
+    <br><br>
 
-$arrF = [2020, 'Ivan', true];
-$arrS = [
-    [
-        "id" => 1,
-        "name" => 'Eugene',
-        "surname" => 'Tevilin',
-        "age" => 35,
-        "lang" => 'ru'
-    ],
-    [
-        "id" => 2,
-        "name" => 'Pit',
-        "surname" => 'Dakote',
-        "age" => 105,
-        "lang" => 'en'
-    ],
-    [
-        "id" => 3,
-        "name" => 'Sem',
-        "surname" => 'Right',
-        "age" => 55,
-        "lang" => 'fn'
-    ]
-];
-$arrT = [
-    "key" => 'asfadhfapsdaskldhfas',
-    "url" => 'http://shlyapa.com',
-    "ssl" => 'AK:SFj0290423kzlfdsaLDSAFJSD:',
-    "db" => [
-        "port" => 3000,
-        "host" => 'localhost',
-        "login" => 'cowboy',
-        "password" => '123klasdjalfk123'
-    ]
-];
-$arrT['db']["port"] = 3309;
-print_r($arrT);
+    <label for=""> Описание товара</label>
+    <textarea name="description" id="" ></textarea>
 
-?>
-<br>
-<br>
-<?php
+    <br><br>
 
-const LOGIN = "admin";
-const PASSWORD = "secret123";
+    <label for=""> Категория товара</label>
+    <select name="category" id="">
+        <option value="1">Категория 1</option>
+        <option value="2">Категория 2</option>
+        <option value="3">Категория 3</option>
+        <option value="4">Категория 4</option>
+    </select>
 
-$tmp_login = 'admin';
-$tmp_password = 'secret123';
+    <br><br>
 
-if ($tmp_login == LOGIN && $tmp_password != PASSWORD) {
-    echo 'Check correct your password';
-} elseif ($tmp_login != LOGIN ) {
-    echo 'User not found';
-} else {
-    echo 'Auth success';
-}
+    <label for="">Цена</label>
+    <input type="number" name="price">
 
-?>
-<br>
-<br>
-<?php
+    <br><br>
 
-$isStatus = true;
+    <button type="submit">Добавить</button>
+</form>
 
-$statusResult = ($isStatus) ? 4322465 : 98645623;
-echo $statusResult;
 
-?>
-<br>
-<br>
-<?php
+<form action="includes/uploads.php" method="post" enctype="multipart/form-data">
+    <label for="">Загрузите картинку</label>
+    <input type="file" name="image">
+    <button type="submit">Загрузить</button>
+</form>
 
-$typeCar = "Lada";
 
-switch ($typeCar) {
-    case "BMW";
-        echo 'Selected is a very good car';
-        break;
-    case "Toyota";
-        echo 'Toyota is a very reliable car!';
-        break;
-    case "Lada";
-        echo 'Don\'t buy these cars!';
-        break;
-    default;
-        echo 'Car not found';
-        break;
-}
 
-?>
+</body>
+</html>
